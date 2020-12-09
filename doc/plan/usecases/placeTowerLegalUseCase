@@ -1,0 +1,34 @@
+/***
+ * Located in Controller.
+ *
+ * The user clicks on an empty grid component, and a tower is placed in that spot, bank amount updates
+ */
+public class placeTowerLegalUseCase {
+  private Game modelAPI;
+  private GameView viewAPI;
+
+  public placeTowerLegalUseCase() {
+    modelAPI = new GameConcrete();
+    viewAPI = new GameViewConcrete();
+  }
+
+  //used in each step method of controller
+  private void monitorTowerCreation() {
+    //first check if a new tower was created this step in the controller
+    //if yes, get info from view about the tower type and position created, then pass it to model api
+    if(viewAPI.getTowerWasCreated()) {
+      Class towerType = viewAPI.getTowerTypeToCreate();
+      Position position = viewAPI.getNewTowerPlacementPosition();
+      tryToCreateTower();
+    }
+  }
+
+  private void tryToCreateTower() {
+    try {
+      modelAPI.createTower(towerType, position);
+    }
+    catch(ModelException e) {
+      //handle the fact that the tower could not be created
+    }
+  }
+}
