@@ -1,0 +1,25 @@
+.splash-screen {
+  -fx-background-color: #cbffc3;
+  -fx-spacing: 5;
+  -fx-alignment: center;
+}
+
+.dropdown-list {
+  -fx-spacing: 5;
+  -fx-alignment: center;
+}
+
+.horizontal-setup {
+  -fx-spacing: 50;
+  -fx-alignment: center;
+}
+
+#title {
+  -fx-alignment: center;
+  -fx-font-family: BigDots;
+  -fx-font-size: 40px;
+}
+
+#name-input-bar {
+  -fx-alignment: center;
+}

@@ -1,0 +1,21 @@
+.root {
+  -fx-background-color: #e3ae68;
+}
+
+.game-view-bar {
+  -fx-hgap: 10;
+  -fx-background-color: #72b865;
+  -fx-alignment: center;
+}
+
+.status-text {
+  -fx-fill: white;
+}
+
+.grid {
+  -fx-alignment: center;
+}
+
+#main-row {
+  -fx-alignment: center;
+}
